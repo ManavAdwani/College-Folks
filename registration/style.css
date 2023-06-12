@@ -1,0 +1,258 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+.container {
+  z-index: 2000;
+}
+
+body {
+  background: #fff;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  /* flex-direction: column; */
+}
+
+.form-box {
+  z-index: 999;
+  /* position: absolute; */
+  background: white;
+  color: black;
+  box-shadow: 0 5px 25px gray;
+  width: 350px;
+  padding: 50px 40px;
+  border-radius: 5px;
+  overflow: hidden;
+  /* float: left; */
+}
+
+.form-box h2 {
+  font-size: 2em;
+  margin-bottom: 40px;
+  font-weight: 700;
+}
+
+.form-box .field {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 2px solid #eee;
+  margin-bottom: 25px;
+}
+
+.form-box .field.active {
+  border-bottom: 2px solid #0065ff;
+  transition: 1s ease;
+}
+
+.form-box .field input {
+  border: none;
+  outline: none;
+  background: none;
+  width: 100%;
+  font-size: 1em;
+  color: black;
+  padding-bottom: 5px;
+}
+
+.form-box .field i {
+  color: #828da0;
+  font-size: 1.3em;
+  margin-right: 10px;
+  padding-bottom: 5px;
+}
+.form-box .field.active i {
+  color: #0065ff;
+  transition: 1s ease;
+}
+
+::placeholder {
+  color: #828da0;
+  font-size: 0.85em;
+}
+
+.eye-btn {
+  cursor: pointer;
+}
+
+.eye-btn i:hover {
+  color: #0065ff;
+  transition: 0.3s ease;
+}
+
+.forget-link {
+  text-align: right;
+  transform: translateY(-10px);
+}
+
+.forget-link a {
+  color: #0065ff;
+  font-size: 0.8em;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.Lsubmit-btn,
+.Ssubmit-btn {
+  background: #0065ff;
+  color: white;
+  border: none;
+  outline: none;
+  width: 120px;
+  padding: 10px 30px;
+  border-radius: 5px;
+  font-size: 0.85em;
+  font-weight: 700;
+  margin-top: 5px;
+  cursor: pointer;
+}
+
+.Lsubmit-btn a,
+.Ssubmit-btn a {
+  text-decoration: none;
+  color: white;
+}
+
+.login-options {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.login-options .text {
+  color: #828da0;
+  font-size: 0.95em;
+  margin: 25px 0;
+}
+
+.other-logins {
+  display: flex;
+}
+
+.other-logins a {
+  border: 1px solid #ccc;
+  padding: 11px 32px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 5px;
+  transition: 0.3s ease;
+}
+
+.other-logins a:hover {
+  border: 1px solid #0065ff;
+}
+
+.other-logins a img {
+  width: 20px;
+}
+
+.imgBox img {
+  /* display: inline; */
+  max-width: 270px;
+}
+
+.sliding-link {
+  display: flex;
+  font-size: 0.8em;
+  margin-bottom: 25px;
+}
+
+.sliding-link span {
+  color: blue;
+  font-weight: 600;
+  margin-left: 5px;
+  cursor: pointer;
+}
+
+.imgBox {
+  /* color: white; */
+  z-index: 888;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* float: left; */
+  background: white;
+  /* box-shadow: 0 5px 25px gray; */
+  box-sizing: 0 0px 5px rgb(0 0 0/10%);
+  height: 400px;
+  padding: 15px 35px;
+  box-shadow: 0 5px 25px gray;
+  /* margin-top: 30px; */
+}
+
+.sign-up-imgBox {
+  border-radius: 5px 0 0 5px;
+}
+
+.sign-up-form .sign-up-imgBox {
+  /* transform: translateX(-100%); */
+  visibility: visible;
+}
+
+.sign-up-form .sign-up-box {
+  /* transform: translateX(-100%); */
+  visibility: visible;
+}
+
+/* Making the Ui Responsive */
+
+@media screen and (max-width: 735px) {
+  .form-container {
+    flex-direction: column;
+    top: 0;
+    overflow: visible;
+    padding: 10px;
+  }
+  .form-box,
+  .imgBox {
+    box-shadow: none;
+    padding: 40px;
+  }
+  .imgBox {
+    box-shadow: none;
+    height: auto;
+    width: 100%;
+    padding: 35px 35px 15px;
+  }
+  .imgBox img {
+    min-width: 45%;
+    max-width: 180px;
+  }
+
+  .sign-up-form {
+    flex-direction: column-reverse;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .form-container {
+    font-size: 0.9em;
+  }
+  .form-box {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 325px) {
+  .other-logins a {
+    padding: 9px 25px;
+    margin: 0 3px;
+  }
+}
